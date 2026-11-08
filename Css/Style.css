@@ -145,3 +145,120 @@ body {
   margin: 6px 0;
   font-size: 0.95rem;
 }
+/* --- Tambahan Style untuk Menonjolkan Kalender Sunda --- */
+
+.sunda-month-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f39c12; /* Warna Emas/Aksen khas Sunda */
+  margin: 0;
+  text-align: center;
+}
+
+.masehi-subtitle {
+  font-size: 0.8rem;
+  color: #8f9cae;
+  display: block;
+  text-align: center;
+  margin-top: 2px;
+}
+
+/* Banner Hero Sunda */
+.sunda-hero-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(243, 156, 18, 0.25);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 12px 0;
+}
+
+.hero-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-label {
+  font-size: 0.7rem;
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hero-value {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.accent-green { color: #2ecc71; }
+.accent-gold { color: #f1c40f; }
+
+/* Penyesuaian Nama Hari Grid (Sunda & Masehi) */
+.weekdays-grid div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 0;
+}
+
+.sunda-day {
+  font-weight: bold;
+  color: #e2e8f0;
+  font-size: 0.85rem;
+}
+
+.weekdays-grid small {
+  font-size: 0.6rem;
+  color: #718096;
+}
+
+/* Penyesuaian Kartu Detail Rincian Hari */
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.sunda-date-badge {
+  background: rgba(243, 156, 18, 0.15);
+  color: #f39c12;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.detail-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px 10px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-item label {
+  font-size: 0.7rem;
+  color: #8f9cae;
+  margin-bottom: 2px;
+}
+
+.detail-item strong, .detail-item span {
+  font-size: 0.85rem;
+  color: #e2e8f0;
+}
+
+.detail-item.full-width {
+  grid-column: span 2;
+}
