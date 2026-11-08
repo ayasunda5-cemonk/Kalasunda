@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalasunda</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="theme-color" content="#1b2838">
+</head>
+<body>
+
+  <div class="app-container">
+    <header class="app-header">
+      <h1>KALASUNDA</h1>
+      <p class="subtitle">Kalender Tradisional Sunda</p>
+    </header>
+
+    <div class="calendar-card">
+      <div class="month-navigation">
+        <button id="prev-btn">&lt;</button>
+        <h2 id="month-year-display"></h2>
+        <button id="next-btn">&gt;</button>
+      </div>
+
+      <div class="sunda-info-box">
+        <span class="info-label">Pancawara / Pasaran:</span>
+        <span id="current-pancawara" class="info-value">-</span>
+      </div>
+
+      <div class="weekdays-grid">
+        <div>Min</div><div>Sen</div><div>Sal</div><div>Rab</div><div>Kam</div><div>Jum</div><div>Sab</div>
+      </div>
+
+      <div id="calendar-days" class="days-grid"></div>
+    </div>
+
+    <div class="detail-card" id="detail-card">
+      <h3>Detail Rincian Hari</h3>
+      <p><strong>Tanggal Masehi:</strong> <span id="detail-masehi">-</span></p>
+      <p><strong>Pancawara (Pasaran):</strong> <span id="detail-pancawara">-</span></p>
+      <p><strong>Wuku:</strong> <span id="detail-wuku">-</span></p>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+</body>
+</html>
