@@ -1,25 +1,4 @@
 {
-  "name": "Kalasunda - Kalender Sunda",
-  "short_name": "Kalasunda",
-  "description": "Aplikasi Kalender Sunda Digital",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#121212",
-  "theme_color": "#1b2838",
-  "icons": [
-    {
-      "src": "https://via.placeholder.com/192x192/1b2838/ffffff?text=Kalasunda",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "https://via.placeholder.com/512x512/1b2838/ffffff?text=Kalasunda",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
-}
-{
   "name": "Kala Sunda",
   "short_name": "KalaSunda",
   "start_url": "/",
