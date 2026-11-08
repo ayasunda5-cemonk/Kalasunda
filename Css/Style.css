@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 480px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  color: #58a6ff;
+  letter-spacing: 2px;
+  font-size: 1.8rem;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+.calendar-card {
+  background-color: #161b22;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #30363d;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.month-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.month-navigation button {
+  background: #21262d;
+  color: #58a6ff;
+  border: 1px solid #30363d;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.sunda-info-box {
+  background: #21262d;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 16px;
+  border-left: 4px solid #58a6ff;
+}
+
+.info-value {
+  font-weight: bold;
+  color: #7ee787;
+}
+
+.weekdays-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  color: #8b949e;
+  margin-bottom: 8px;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.day-cell {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d1117;
+  border-radius: 6px;
+  border: 1px solid #21262d;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.day-cell.empty {
+  background-color: transparent;
+  border: none;
+}
+
+.day-cell .sunda-sub {
+  font-size: 0.65rem;
+  color: #8b949e;
+  margin-top: 2px;
+}
+
+.day-cell.active {
+  border-color: #58a6ff;
+  background-color: #1f6feb33;
+}
+
+.day-cell.today {
+  background-color: #238636;
+  color: white;
+}
+
+.day-cell.today .sunda-sub {
+  color: #d2k3a0;
+}
+
+.detail-card {
+  margin-top: 16px;
+  background-color: #161b22;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid #30363d;
+}
+
+.detail-card h3 {
+  color: #58a6ff;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.detail-card p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
