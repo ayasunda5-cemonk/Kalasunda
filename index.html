@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kalasunda</title>
+  <title>Kalasunda - Kalender Tradisional Sunda</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="Css/Style.css">
   <meta name="theme-color" content="#1b2838">
@@ -11,35 +11,88 @@
 <body>
 
   <div class="app-container">
+    <!-- Header Aplikasi -->
     <header class="app-header">
+      <div class="logo-badge">ᮊᮜᮞᮥᮔ᮪ᮓ</div>
       <h1>KALASUNDA</h1>
       <p class="subtitle">Kalender Tradisional Sunda</p>
     </header>
 
+    <!-- Navigation Header: Utama Bulan Sunda, Sekunder Masehi -->
     <div class="calendar-card">
       <div class="month-navigation">
-        <button id="prev-btn">&lt;</button>
-        <h2 id="month-year-display"></h2>
-        <button id="next-btn">&gt;</button>
+        <button id="prev-btn" aria-label="Bulan Sebelumnya">&lt;</button>
+        <div class="title-group">
+          <!-- Bulan Sunda jadi visual utama -->
+          <h2 id="sunda-month-display" class="sunda-month-title">-- ---- Caka</h2>
+          <!-- Masehi jadi subtitle penjelas -->
+          <span id="month-year-display" class="masehi-subtitle">-- ----</span>
+        </div>
+        <button id="next-btn" aria-label="Bulan Berikutnya">&gt;</button>
       </div>
 
-      <div class="sunda-info-box">
-        <span class="info-label">Pancawara / Pasaran:</span>
-        <span id="current-pancawara" class="info-value">-</span>
+      <!-- Info Utama Sunda (Highlight Card) -->
+      <div class="sunda-hero-box">
+        <div class="hero-item">
+          <span class="hero-label">Pancawara</span>
+          <span id="current-pancawara" class="hero-value accent-green">-</span>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-item">
+          <span class="hero-label">Wuku</span>
+          <span id="current-wuku" class="hero-value accent-gold">-</span>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-item">
+          <span class="hero-label">Windu</span>
+          <span id="current-windu" class="hero-value">-</span>
+        </div>
       </div>
 
+      <!-- Nama Hari Grid (Memuat Nama Hari Sunda & Umum) -->
       <div class="weekdays-grid">
-        <div>Min</div><div>Sen</div><div>Sal</div><div>Rab</div><div>Kam</div><div>Jum</div><div>Sab</div>
+        <div><span class="sunda-day">Rad</span><small>Min</small></div>
+        <div><span class="sunda-day">Som</span><small>Sen</small></div>
+        <div><span class="sunda-day">Ang</span><small>Sal</small></div>
+        <div><span class="sunda-day">Rah</span><small>Rab</small></div>
+        <div><span class="sunda-day">Bri</span><small>Kam</small></div>
+        <div><span class="sunda-day">Suk</span><small>Jum</small></div>
+        <div><span class="sunda-day">Tum</span><small>Sab</small></div>
       </div>
 
+      <!-- Grid Tanggal -->
       <div id="calendar-days" class="days-grid"></div>
     </div>
 
+    <!-- Detail Rincian Hari Terpilih -->
     <div class="detail-card" id="detail-card">
-      <h3>Detail Rincian Hari</h3>
-      <p><strong>Tanggal Masehi:</strong> <span id="detail-masehi">-</span></p>
-      <p><strong>Pancawara (Pasaran):</strong> <span id="detail-pancawara">-</span></p>
-      <p><strong>Wuku:</strong> <span id="detail-wuku">-</span></p>
+      <div class="detail-header">
+        <h3>Detail Rincian Poë (Hari)</h3>
+        <span id="detail-sunda-date" class="sunda-date-badge">-</span>
+      </div>
+      
+      <div class="detail-grid">
+        <div class="detail-item prominent">
+          <label>Pancawara (Pasaran)</label>
+          <strong id="detail-pancawara">-</strong>
+        </div>
+        <div class="detail-item prominent">
+          <label>Wuku</label>
+          <strong id="detail-wuku">-</strong>
+        </div>
+        <div class="detail-item">
+          <label>Sadwara (6 Poë)</label>
+          <span id="detail-sadwara">-</span>
+        </div>
+        <div class="detail-item">
+          <label>Nepton / Naktu</label>
+          <span id="detail-nepton">-</span>
+        </div>
+        <div class="detail-item full-width masehi-info">
+          <label>Tanggal Masehi</label>
+          <span id="detail-masehi">-</span>
+        </div>
+      </div>
     </div>
   </div>
 
