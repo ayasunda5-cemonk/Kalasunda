@@ -7,6 +7,8 @@
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="Css/Style.css">
   <meta name="theme-color" content="#1b2838">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#1e293b">
 </head>
 <body>
 
@@ -101,6 +103,13 @@
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js');
     }
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then((reg) => console.log('SW terdaftar:', reg.scope))
+        .catch((err) => console.log('SW gagal:', err));
+    });
+  }
   </script>
 </body>
 </html>
