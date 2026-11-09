@@ -262,3 +262,39 @@ body {
 .detail-item.full-width {
   grid-column: span 2;
 }
+/* --- Perbaikan Tambahan untuk Mobile & Responsif --- */
+
+/* Mencegah teks panjang meluber pada kartu rincian */
+.detail-item {
+  word-break: break-word;
+  overflow: hidden;
+}
+
+/* Memastikan tombol navigasi bulan ( < > ) nyaman disentuh di HP */
+.month-navigation button {
+  min-width: 44px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Penyesuaian kontras teks pada hari ini (Today) di mode gelap */
+.day-cell.today {
+  background-color: #238636;
+  color: #ffffff;
+  border-color: #2ea043;
+}
+
+.day-cell.today .sunda-sub {
+  color: #e6ffed;
+}
+
+/* Mempercantik transisi saat tombol bulan atau tanggal diklik */
+.day-cell, .month-navigation button {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.day-cell:active {
+  transform: scale(0.95);
+}
